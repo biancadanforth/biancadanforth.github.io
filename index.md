@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+# Upgrade Lightbeam Blog
 
-You can use the [editor on GitHub](https://github.com/biancadanforth/biancadanforth.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Welcome! This is the page I ([Bianca Danforth](http://biancadanforth.com)) will be using as a blog for my [Outreachy](https://www.gnome.org/outreachy/) web development internship with [Mozilla](http://mozilla.org) between May and August 2017.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## What I am working on
 
-### Markdown
+Re-designing and re-implementing the Firefox add-on [Lightbeam](https://addons.mozilla.org/en-US/firefox/addon/lightbeam/) as a WebExtension. The repository can be found [here](https://github.com/pauljt/lightbeam-we).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![Image](http://biancadanforth.com/images/lightbeam-gather-information.png)
 
-```markdown
-Syntax highlighted code block
+## Developer's Log: Stardate 050617
+#### Setting up the blog
 
-# Header 1
-## Header 2
-### Header 3
+First-time blogger, long-time reader of blogs! I know there are many options out there, and eventually, I'll probably distill the contents of this page and put it on my professional website. For now though, GitHub Pages seems like the best choice for this blog, since:
+- I already have a GitHub account,
+- the project is hosted on GitHub,
+- there are style templates,
+- and Markdown syntax makes presenting content really easy--even code!
 
-- Bulleted
-- List
+```javascript
+function checkSyntaxHighlighting() {
+  return true;
+}
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+const isWorking = checkSyntaxHighlighting(); // true
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/biancadanforth/biancadanforth.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
