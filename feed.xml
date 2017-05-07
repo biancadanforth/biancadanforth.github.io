@@ -5,7 +5,7 @@
 <link>https://biancadanforth.github.io/</link>
 <description>Upgrade Lightbeam project blog for my web development internship with Mozilla.</description>
 <item>
-<title>Article 3</title>
+<!-- <title>Article 3</title>
 <link>example.com/3</link>
 <guid>example.com/3</guid>
 <pubDate>Wed, 27 Nov 2013 13:20:00 GMT</pubDate>
@@ -18,7 +18,7 @@
 <pubDate>Tue, 26 Nov 2013 12:15:12 GMT</pubDate>
 <description>My second article.</description>
 </item>
-<item>
+<item> -->
 <title>Setting up the blog</title>
 <link>https://biancadanforth.github.io/2017/05/06/setting-up-the-blog.html</link>
 <guid> example.com/1</guid>
