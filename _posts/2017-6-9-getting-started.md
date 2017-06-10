@@ -5,10 +5,12 @@ categories: "git"
 author: "Bianca Danforth"
 meta: ""
 ---
- 
-### I got Issues!
- 
+
+## What I learned in my first two weeks as a web development intern at Mozilla.
+
 The Upgrade Lightbeam project got out of the gates at a strong clip, with my web development mentor, Jonathan Kingston, creating and assigning several issues to tackle as part of a Lightbeam MVP (minimum viable product).
+
+### I got Issues!
 
 #### Closed MVP Issue #4: Set up basic web extension
 I was, as they say in the UK, positively chuffed to have successfully merged my first pull request (PR) and close my first issue on day one!
@@ -19,7 +21,7 @@ This PR initialized a `manifest.json` file for the web extension, opening the Li
 This issue was a little trickier for me! I used a `capture` parent object with methods to log first and third party HTTP requests (along with some additional details) to the console.
 
 ### Git(Hub) workflows
-Before Outreachy, I had never before contributed to an open source project, so these first weeks focused heavily on learning best practices.
+Before Outreachy, I had never contributed to an open source project, so these first weeks focused heavily on learning best practices.
 
 #### TIL: Fork then clone.
 Rather than directly cloning the main repository (let's call it _upstream_) in GitHub, I should fork _upstream_ to create my own remote copy (let's call it _origin_), clone _origin_ locally and set up a reference to _upstream_ in order to ensure my local copy of _origin_ can fetch changes and reflect the most recent state of the source code. This allows me to make commits locally and back up my work remotely to _origin_ without notifying the administrators of the _upstream_ repository until I am ready for a pull request.
@@ -54,7 +56,7 @@ After submitting a PR for review with one feature branch off of `master`, I crea
 After spending three days on a pull request that ended up not being what the project needed, Luke Crouch, a Mozilla web development mentor on the project, gave me some very solid advice: When starting on a new feature, carte blanche, don't spend more than an hour before making a DNM pull request and getting the code reviewed. Keep doing this until your are going in the right direction. At that point, spend one day extending the code further; then again submit it for another DNM PR (code review) and continue in this fashion until you're absolutely sure you are going in the right direction.
  
 ### User Experience (UX)
-One afternoon during this period, I volunteered to participate in some user testing conducted by my alma mater's alumni association to improve their young alumni website.
+To get more experience with UX, I volunteered to participate in some user testing conducted by my alma mater's alumni association to improve their young alumni website.
 
 #### TIL:
 
