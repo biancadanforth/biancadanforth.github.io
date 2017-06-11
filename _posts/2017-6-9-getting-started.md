@@ -87,7 +87,7 @@ I also installed a package in my text editor, SublimeLinter, which flags any cod
 Git hooks force code to be tested at a specified stage in the git process (for example: pre-commit, pre-push, post-commit, etc.). Tools like [husky](https://github.com/typicode/husky) are often used.
 
 #### TIL: ES7 `await` and `async` can come in handy
-I learned about these when trying to figure out how to access an object returned by an asynchronouse method (`get`) in the `tabs` WebExtension API that returns a Promise. When used inside of an asynchronous function, the `await` keyword pauses the execution of the script at that line until its asynchronous code has returned a value.
+I learned about these when trying to figure out how to access an object returned by an asynchronous method (`get`) in the `tabs` WebExtension API that returns a Promise. When used inside of an asynchronous function, the `await` keyword pauses the execution of the script at that line until its asynchronous code has returned a value.
 
 ```javascript
 async function functionName(response) {
