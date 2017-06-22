@@ -16,7 +16,7 @@ Functionally, the MVP for re-implementing Lightbeam as a web extension involved:
 * storing those requests (and data about them) on the client side in a single object `websites`
 * visualizing the first and third party connections (for now without a visualization library)
 
-<img src="http://biancadanforth.com/images/initial-d3-vis.png" alt="Lightbeam MVP with an initial d3 visualization">
+![Lightbeam MVP with an initial d3 visualization](http://biancadanforth.github.io/images/initial-d3-vis.png)
 
 Shown above is our MVP with a bonus initial d3 visualization of the first- and third-party data (still ironing out the bugs)!
 
@@ -63,7 +63,7 @@ According to Mr. Kaykas-Wolff, users are changing their behaviors. In fact, the 
 
 While re-implementing Lightbeam, it would be wise to keep this kind of user in mind as our target audience. Their behaviors and goals are quite different from the general population, as evidenced by some data presented by Mr. Kaykas-Wolff:
 
-<img src="http://biancadanforth.com/images/jascha-kaykas-wolff-conscious-chooser.png" alt="The 'conscious chooser' internet user behaves differently from the average internet user">
+![The 'conscious chooser' internet user behaves differently from the average internet user](http://biancadanforth.github.io/images/jascha-kaykas-wolff-conscious-chooser.png)
  
 ### A tale of two `store` instances
 
