@@ -12,11 +12,18 @@
 	<description>My newest article.</description>
 	</item>
 -->
+ 	<item>
+		<title>There and Back Again: an Intern's Tale</title>
+		<link>https://biancadanforth.github.io/git/2017/07/03/there-and-back-again-an-interns-tale.html</link>
+		<guid>example.com/3</guid>
+		<pubDate>Mon, 3 July 2017 14:58:23 GMT</pubDate>
+		<description>My Experience at Mozilla’s All Hands in San Francisco</description>
+	</item>
 	<item>
 		<title>The end of the beginning</title>
 		<link>https://biancadanforth.github.io/git/2017/06/22/the-end-of-the-beginning.html</link>
 		<guid>example.com/2</guid>
-		<pubDate>Thurs, 22 Jun 2017 03:52:11 GMT</pubDate>
+		<pubDate>Thu, 22 Jun 2017 03:52:11 GMT</pubDate>
 		<description>Mission accomplished: MVP</description>
 	</item>
 	<item>
