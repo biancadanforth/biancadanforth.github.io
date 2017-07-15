@@ -12,6 +12,13 @@
 	<description>My newest article.</description>
 	</item>
 -->
+	<item>
+		<title>SOUPS 2017 Conference</title>
+		<link>https://biancadanforth.github.io/git/2017/07/15/soups-2017-conference.html</link>
+		<guid>example.com/3</guid>
+		<pubDate>Sun, 16 July 2017 14:21:41 GMT</pubDate>
+		<description>What I learned while attending SOUPS</description>
+	</item>
  	<item>
 		<title>There and Back Again: an Intern's Tale</title>
 		<link>https://biancadanforth.github.io/git/2017/07/03/there-and-back-again-an-interns-tale.html</link>
