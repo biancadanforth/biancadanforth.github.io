@@ -13,6 +13,13 @@
 	</item>
 -->
 	<item>
+		<title>Storage: One of the Final Frontiers</title>
+		<link>https://biancadanforth.github.io/git/2017/08/11/storage-one-of-the-final-frontiers.html</link>
+		<guid>example.com/3</guid>
+		<pubDate>Sat, 11 Aug 2017 13:15:17 GMT</pubDate>
+		<description>Finding a permanent storage home. Breaking down our move from localStorage via the storage WebExtension API to IndexedDB via Dexie.</description>
+	</item>
+	<item>
 		<title>The beginning of the end</title>
 		<link>https://biancadanforth.github.io/git/2017/07/29/the-beginning-of-the-end.html</link>
 		<guid>example.com/3</guid>
