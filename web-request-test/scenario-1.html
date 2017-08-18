@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>What do different URLs refer to from the webRequest WebExtension API</title>
+    <meta name="description" content="Scenario 1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <section>
+      <h2>Scenario 1: an <code>iframe</code> pointing to a different webpage</h2>
+      <p>Note: Skillcrush actually makes dozens of third party requests - Request 2 and 3 are representative of those, all of which are currently captured.</p>
+      <table>
+      <tr>
+        <th></th>
+        <th>Request 1</th>
+        <th>Request 2</th>
+        <th>Request 3</th>
+      </tr>
+        <tr>
+          <th>response.documentUrl</th>
+          <td>biancadanforth.github.io</td>
+          <td>skillcrush.com</td>
+          <td>skillcrush.com</td>
+        </tr>
+        <tr>
+          <th>response.originUrl</th>
+          <td>biancadanforth.github.io</td>
+          <td>skillcrush.com</td>
+          <td>skillcrush.com</td>
+        </tr>
+        <tr>
+          <th>response.targetUrl</th>
+          <td>skillcrush.com</td>
+          <td>fonts.googleapis.com</td>
+          <td>js.center.io</td>
+        </tr>
+      </table>
+      <iframe src="https://skillcrush.com"></iframe>
+      <h3>Conclusion</h3>
+      <p><code>response.documentUrl</code> can point to <code>iframe</code> documents, and third party requests made by <code>iframe</code>s are captured with our current logic. <code>response.originUrl</code> mirrors <code>response.documentUrl</code>.</p>
+    </section>
+  </body>
+</html>

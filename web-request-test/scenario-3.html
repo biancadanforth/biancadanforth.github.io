@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>What do different URLs refer to from the webRequest WebExtension API</title>
+    <meta name="description" content="Scenario 3">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <section>
+      <h2>Scenario 3: an <code>iframe</code> loads an image</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th>Request 1</th>
+        </tr>
+        <tr>
+          <th>response.documentUrl</th>
+          <td>biancadanforth.github.io</td>
+        </tr>
+        <tr>
+          <th>response.originUrl</th>
+          <td>biancadanforth.github.io</td>
+        </tr>
+        <tr>
+          <th>response.targetUrl</th>
+          <td>lh3.googleusercontent.com</td>
+        </tr>
+      </table>
+      <iframe src="https://lh3.googleusercontent.com/LqqPrw2sgzIW28qOm7X3tNBC5CgSTF5PBUyOQ_VUJgejbkkq6rUyPsCbsMfmYMuvAmdg_w7Dw5AE09dKVpICrSU=s0">
+      </iframe>
+      <h3>Conclusion</h3>
+      <p>Loading a third party image in an <code>iframe</code> is treated as a third party request with the parent frame as the documentUrl and originUrl.</p>
+    </section>
+  </body>
+</html>

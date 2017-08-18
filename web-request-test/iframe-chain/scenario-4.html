@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>What do different URLs refer to from the webRequest WebExtension API</title>
+    <meta name="description" content="Scenario 4">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+  <section>
+      <h2>Scenario 4: A chain of <code>iframe</code>s, each loading a separate and distinct third party resource (an HTML document in this case).</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th>Request 1</th>
+        </tr>
+        <tr>
+          <th>response.documentUrl</th>
+          <td>biancadanforth.com</td>
+        </tr>
+        <tr>
+          <th>response.originUrl</th>
+          <td>biancadanforth.com</td>
+        </tr>
+        <tr>
+          <th>response.targetUrl</th>
+          <td>biancadanforth.github.io</td>
+        </tr>
+      </table>
+      <iframe src="https://biancadanforth.github.io/web-request-test/iframe-chain/page.html">
+      </iframe>
+      <h3>Conclusion</h3>
+      <p>The nested <code>iframe</code>s' third party requests are picked up by webRequest.onResponseStarted, though the current capture code would discard any nested <code>iframe</code> requests as written now, since response.targetUrl is only different from response.documentUrl in the case of the first <code>iframe</code>.</p>
+    </section>
+  </body>
+</html>

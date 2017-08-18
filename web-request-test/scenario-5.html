@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>What do different URLs refer to from the webRequest WebExtension API</title>
+    <meta name="description" content="Scenario 5">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <section id="sw-container">
+      <h2>Scenario 5: A service worker is used.</h2>
+      <p>
+        I set up my own service worker and hosted the fake website over HTTPS on my GitHub website.
+      </p>
+      <table>
+        <tr>
+          <th></th>
+          <th>Request 1</th>
+        </tr>
+        <tr>
+          <th>response.documentUrl</th>
+          <td>biancadanforth.github.io</td>
+        </tr>
+        <tr>
+          <th>response.originUrl</th>
+          <td>biancadanforth.github.io</td>
+        </tr>
+        <tr>
+          <th>response.targetUrl</th>
+          <td>assets-cdn.github.com</td>
+        </tr>
+      </table>
+      <h3>Conclusion</h3>
+      <p>The third party request (to load an image from GitHub) made by the service worker is reported by webRequest.onResponseStarted and captured with the current logic. I have not been able to get a third party resource cached in the Service Worker to test this additional scenario, as I get a COR error.</p>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
