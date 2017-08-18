@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <title>What do different URLs refer to from the webRequest WebExtension API</title>
+    <meta name="description" content="The webRequest.onResponseStarted event returns a response object with HTTP request details, including a key for documentUrl, targetUrl and originUrl. The purpose of this experiment is to find out what each means in a lot of different scenarios.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Motivation</h1>
+    <p>The webRequest.onResponseStarted event returns a response object with HTTP request details, including a key for documentUrl, targetUrl and originUrl. The purpose of this experiment is to find out what each means in a lot of different scenarios..</p>
+    <h2>Instructions</h2>
+    <p>Uncomment one section at a time to see the results for that experiment on this page and in the browser console.</p>
+    <hr>
+<!--     <section>
+    <h2>Scenario 1: an <code>iframe</code> pointing to a different webpage</h2>
+      <table>
+      <tr>
+        <th></th>
+        <th>Request 1</th>
+        <th>Request 2</th>
+        <th>Request 3</th>
+        <th>Request 4</th>
+        <th>Request 5</th>
+      </tr>
+        <tr>
+          <th>response.documentUrl</th>
+          <td>86113b9b-dde2-9343-8806-4b4a969fbf79</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+        </tr>
+        <tr>
+          <th>response.targetUrl</th>
+          <td>biancadanforth.com</td>
+          <td>fonts.googleapis.com</td>
+          <td>www.google.com</td>
+          <td>codepen.io</td>
+          <td>www.gstatic.com</td>
+        </tr>
+        <tr>
+          <th>response.originUrl</th>
+          <td>86113b9b-dde2-9343-8806-4b4a969fbf79</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+        </tr>
+      </table>
+      <iframe src="http://www.biancadanforth.com"></iframe>
+      <h3>Conclusion</h3>
+      <p><code>response.documentUrl</code> can point to <code>iframe</code> documents, and third party requests made by <code>iframe</code>s are captured. <code>response.originUrl</code> mirrors <code>response.documentUrl</code>.</p>
+    </section> -->
+<!--<section>
+      <h2>Scenario 2: an <code>iframe</code> pointing to a different webpage within another <code>iframe</code> pointing to yet another webpage</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th>Request 1</th>
+          <th>Request 2</th>
+          <th>Request 3</th>
+          <th>Request 4</th>
+          <th>Request 5</th>
+        </tr>
+        <tr>
+          <th>response.documentUrl</th>
+          <td>86113b9b-dde2-9343-8806-4b4a969fbf79</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+        </tr>
+        <tr>
+          <th>response.targetUrl</th>
+          <td>biancadanforth.com</td>
+          <td>fonts.googleapis.com</td>
+          <td>www.google.com</td>
+          <td>codepen.io</td>
+          <td>www.gstatic.com</td>
+        </tr>
+        <tr>
+          <th>response.originUrl</th>
+          <td>86113b9b-dde2-9343-8806-4b4a969fbf79</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+          <td>biancadanforth.com</td>
+        </tr>
+      </table>
+      <iframe src="http://www.biancadanforth.com">
+        <iframe src="http://www.tylersavin.com"></iframe>
+      </iframe>
+      <h3>Conclusion</h3>
+      <p>The nested <code>iframe</code> isn't loaded. Same results as Scenario 1.</p>
+    </section> -->
+<!--     <section>
+      <h2>Scenario 3: an <code>iframe</code> loads a script</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th>Request 1</th>
+        </tr>
+        <tr>
+          <th>response.documentUrl</th>
+          <td>86113b9b-dde2-9343-8806-4b4a969fbf79</td>
+        </tr>
+        <tr>
+          <th>response.targetUrl</th>
+          <td>raw.githubusercontent.com</td>
+        </tr>
+        <tr>
+          <th>response.originUrl</th>
+          <td>86113b9b-dde2-9343-8806-4b4a969fbf79</td>
+        </tr>
+      </table>
+      <iframe src="https://raw.githubusercontent.com/mozilla/localForage/master/dist/localforage.min.js">
+      </iframe>
+      <h3>Conclusion</h3>
+      <p>Loading a third party script in an <code>iframe</code> is treated as a third party request with the parent frame as the documentUrl and originUrl.</p>
+    </section> -->
+<!--      <section>
+      <h2>Scenario 4: an <code>iframe</code> loads an image</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th>Request 1</th>
+        </tr>
+        <tr>
+          <th>response.documentUrl</th>
+          <td>86113b9b-dde2-9343-8806-4b4a969fbf79</td>
+        </tr>
+        <tr>
+          <th>response.targetUrl</th>
+          <td>biancadanforth.com</td>
+        </tr>
+        <tr>
+          <th>response.originUrl</th>
+          <td>86113b9b-dde2-9343-8806-4b4a969fbf79</td>
+        </tr>
+      </table>
+      <iframe src="http://biancadanforth.com/images/lightbeam-glamour.png">
+      </iframe>
+      <h3>Conclusion</h3>
+      <p>Loading a third party image in an <code>iframe</code> is treated as a third party request with the parent frame as the documentUrl and originUrl.</p>
+    </section> -->
+    <!-- <section>
+      <h2>Scenario 5: A chain of <code>iframe</code>s, each loading a separate and distinct third party site.
+      <table>
+        <tr>
+          <th></th>
+          <th>Request 1</th>
+        </tr>
+        <tr>
+          <th>response.documentUrl</th>
+          <td>86113b9b-dde2-9343-8806-4b4a969fbf79</td>
+        </tr>
+        <tr>
+          <th>response.targetUrl</th>
+          <td>www.google.com</td>
+        </tr>
+        <tr>
+          <th>response.originUrl</th>
+          <td>86113b9b-dde2-9343-8806-4b4a969fbf79</td>
+        </tr>
+      </table>
+      <iframe src="https://www.google.com/">
+        <iframe src="www.npr.org">
+          <iframe src="https://www.reddit.com/">
+          </iframe>
+        </iframe>
+      </iframe>
+      <h3>Conclusion</h3>
+      <p>The nested <code>iframe</code>s aren't loaded. Same results as Scenario 2.</p>
+    </section> -->
+    <section id="sw-container">
+      <h2>Scenario 6: A service worker is used. Instead of setting up my own service worker (which I couldn't figure out in a reasonable amount of time), I will simply record the request data from Lightbeam with this sample Service Worker <a href="https://mdn.github.io/sw-test/" target="_blank">app</a> and post the results here.</h2>
+      <table>
+        <tr>
+          <th></th>
+          <th>Request 1</th>
+        </tr>
+        <tr>
+          <th>response.documentUrl</th>
+          <td>https://mdn.github.io/sw-test/</td>
+        </tr>
+        <tr>
+          <th>response.targetUrl</th>
+          <td>https://mdn.github.io/sw-test/sw.js</td>
+        </tr>
+        <tr>
+          <th>response.originUrl</th>
+          <td>https://mdn.github.io/sw-test/</td>
+        </tr>
+      </table>
+      <h3>Conclusion</h3>
+      <p>The request made by the page to load the service worker is captured by webRequest.onResponseStarted, but none of its cached resources are captured. Granted, none of the cached resources are third party resources. However when I similarly loaded twitter.com which uses a push service worker, I also could not distinguish captured requests as having originated from a service worker or otherwise.</p>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
