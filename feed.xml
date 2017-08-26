@@ -13,6 +13,13 @@
 	</item>
 -->
 	<item>
+		<title>Remaking Lightbeam as a web extension: what we learned</title>
+		<link>https://biancadanforth.github.io/git/2017/08/25/web-extension-lessons-learned.html</link>
+		<guid>example.com/3</guid>
+		<pubDate>Fri, 25 Aug 2017 23:35:42 GMT</pubDate>
+		<description>Practical takeaways for other web extension developers including a key concept (background versus content scripts), technique (proxy objects) and developer tool (the web-ext CLI).</description>
+	</item>
+	<item>
 		<title>Storage: One of the Final Frontiers</title>
 		<link>https://biancadanforth.github.io/git/2017/08/11/storage-one-of-the-final-frontiers.html</link>
 		<guid>example.com/3</guid>
